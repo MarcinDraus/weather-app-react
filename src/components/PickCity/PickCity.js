@@ -7,8 +7,8 @@ import { useState } from 'react';
 
 const PickCity = ({action}) => {
  const [city, setCity] = useState('');
- const handleSubmit = (e) => {
-  e.preventDefault();
+ const handleSubmit = (c) => {
+  c.preventDefault();
   action(city);
   setCity('');
  };
@@ -16,7 +16,7 @@ const PickCity = ({action}) => {
   return (
     <form onSubmit={handleSubmit} className={styles.pickCityForm}> 
       <label>
-        <TextInput placeholder="Enter city name...." value={city} onChange={e => setCity(e.target.value)} />
+        <TextInput placeholder="Enter city name...." value={city} onChange={c => setCity(c.target.value)} />
       </label>
       <Button>Search</Button>
     </form>
