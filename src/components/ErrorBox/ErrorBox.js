@@ -6,7 +6,7 @@ const ErrorBox = ({ children }) => {
     <div className={styles.errorBox}>
       <h1>
         <span className="fa fa-exclamation-triangle" />
-        Error
+        CityNotFound
       </h1>
       <p>
         {children}
